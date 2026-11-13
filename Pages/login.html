@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <script>
+    (function () {
+      try {
+        var t =
+          localStorage.getItem('vestiqTema') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login | VestIQ</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body>
+  <div class="auth">
+    <aside class="auth-aside">
+      <img src="../assets/img/vestIQ.png" alt="VestIQ">
+      <h1>Organize seu estoque.</h1>
+      <p>Uma gestão simples e inteligente dos materiais de costura e aprendizagem.</p>
+    </aside>
+    <main class="auth-main">
+      <section class="auth-box">
+        <span class="tag" style="color:#6741a5">ACESSO AO SISTEMA</span>
+        <h2>Bem-vindo de volta!</h2>
+        <p>Entre com seu e-mail e senha institucional.</p>
+        <form id="login">
+          <div class="campo">
+            <label>E-mail</label>
+            <input id="email" type="email" required placeholder="seu@email.com">
+          </div>
+          <div class="campo">
+            <label>Senha</label>
+            <input id="senha" type="password" required placeholder="Sua senha">
+            <a href="recuperar-senha.html" style="display:block;margin-top:8px;text-align:right;font-size:13px">Esqueci minha senha</a>
+          </div>
+          <div class="campo">
+            <label>Perfil de acesso</label>
+            <select id="cargo">
+              <option value="professor">Professor</option>
+              <option value="supervisor">Supervisor</option>
+              <option value="coordenador">Coordenador</option>
+            </select>
+          </div>
+          <div id="msg"></div>
+          <button type="submit" class="btn">Entrar no VestIQ →</button>
+        </form>
+        <a class="btn sec" href="cadastro.html" style="display:block;text-align:center;margin-top:12px">
+          Ir para cadastro de usuário
+        </a>
+        <p class="auth-foot">
+          A criação de contas e a atribuição de cargos são controladas pela coordenação.<br>
+          Protótipo acadêmico: dados armazenados neste navegador.
+        </p>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/login-page.js"></script>
+</body>
+</html>

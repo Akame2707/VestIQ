@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <script>
+    (function () {
+      try {
+        var t =
+          localStorage.getItem('vestiqTema') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Relatórios | VestIQ</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body data-page="reports">
+  <header class="topo">
+    <a class="marca" href="index.html">
+      <img src="../assets/img/vestIQ.png" alt="VestIQ">
+      <div>
+        <h1>VestIQ</h1>
+        <p>Gestão de materiais</p>
+      </div>
+    </a>
+    <button class="menu-mobile" id="menuMobile">☰</button>
+    <nav id="menu">
+      <a data-link="inicio" href="index.html">Início</a>
+      <a data-link="produtos" href="produtos.html">Produtos</a>
+      <a data-link="pedidos" href="pedidos.html">Solicitar materiais</a>
+      <a data-link="relatorios" href="relatorios.html">Relatórios</a>
+      <a data-link="perfil" href="perfil.html">Meu perfil</a>
+    </nav>
+    <div class="usuario">
+      <div class="avatar" data-avatar>U</div>
+      <div class="ident">
+        <span data-user-name>Usuário</span>
+        <small data-user-role>Cargo</small>
+      </div>
+      <button class="sair" id="btnSair">Sair</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="boas">
+      <div>
+        <span class="tag">INDICADORES</span>
+        <h2>Relatórios de estoque</h2>
+        <p>Acompanhe a disponibilidade e identifique necessidades de reposição.</p>
+      </div>
+      <div class="simbolo">▥</div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <small>Produtos</small>
+        <strong id="rpTotal">0</strong>
+      </article>
+      <article class="card">
+        <small>Unidades em estoque</small>
+        <strong id="rpQtd">0</strong>
+      </article>
+      <article class="card">
+        <small>Estoque baixo / esgotado</small>
+        <strong><span id="rpBaixo">0</span> / <span id="rpZero">0</span></strong>
+      </article>
+    </section>
+
+    <section class="painel">
+      <h2>Posição detalhada</h2>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Categoria</th>
+              <th>Quantidade</th>
+              <th>Mínimo</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="rpTabela"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

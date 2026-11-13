@@ -1,0 +1,474 @@
+
+/* ============================
+   CONFIGURAÇÕES GERAIS
+============================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background: #f6f3fa;
+    overflow-x: hidden;
+}
+
+
+/* ============================
+   PAINEL LATERAL
+============================ */
+
+.VestIQ {
+    width: 43%;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        145deg,
+        #35145f,
+        #6533a0,
+        #8e5bc1
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    text-align: center;
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.VestIQ img {
+    display: block;
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* DECORAÇÕES */
+
+.decoracao {
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+}
+
+.decoracao1 {
+    width: 350px;
+    height: 350px;
+    top: -120px;
+    left: -120px;
+}
+
+.decoracao2 {
+    width: 450px;
+    height: 450px;
+    bottom: -220px;
+    right: -150px;
+}
+
+
+/* ============================
+   FORMULÁRIO
+============================ */
+
+.login_box {
+    width: 57%;
+    max-width: 600px;
+
+    margin: auto;
+    padding: 45px 55px;
+
+    animation: subir 0.8s ease;
+}
+
+.topo-formulario {
+    margin-bottom: 35px;
+}
+
+
+/* ETIQUETA */
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    background: #eee5f8;
+    color: #6937a1;
+
+    border-radius: 30px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 18px;
+}
+
+
+/* TÍTULOS */
+
+.login_box h2 {
+    font-size: 2.3rem;
+    color: #27183a;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #898191;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* ============================
+   CAMPOS
+============================ */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+
+    color: #41334f;
+
+    font-size: 0.88rem;
+    font-weight: 650;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUT */
+
+.input-box {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 54px;
+
+    background: white;
+
+    border: 1.5px solid #e5dfe9;
+    border-radius: 12px;
+
+    padding: 0 16px;
+
+    transition: 0.3s;
+}
+
+.input-box > i {
+    color: #9474b5;
+    font-size: 1rem;
+    margin-right: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #30223f;
+    font-size: 0.92rem;
+}
+
+.input-box input::placeholder {
+    color: #b6aebf;
+}
+
+
+/* EFEITO AO CLICAR */
+
+.input-box:focus-within {
+    border-color: #743db1;
+
+    box-shadow:
+        0 0 0 4px rgba(116,61,177,0.12);
+
+    background: #fff;
+}
+
+.input-box:focus-within > i {
+    color: #743db1;
+}
+
+
+/* MOSTRAR SENHA */
+
+.olho {
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+    padding: 5px;
+
+    color: #9888a8;
+    font-size: 1rem;
+}
+
+.olho:hover {
+    color: #743db1;
+}
+
+
+/* ============================
+   OPÇÕES
+============================ */
+
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 8px 0 28px;
+
+    gap: 10px;
+}
+
+
+/* LEMBRAR DE MIM */
+
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #81778c;
+    font-size: 0.85rem;
+
+    cursor: pointer;
+}
+
+.lembrar input {
+    accent-color: #743db1;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+
+/* LINKS */
+
+.login_box a {
+    color: #713caf;
+
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.login_box a:hover {
+    color: #40176e;
+    text-decoration: underline;
+}
+
+
+/* ============================
+   BOTÃO LOGIN
+============================ */
+
+.btn-login {
+    width: 100%;
+    height: 55px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        100deg,
+        #57258a,
+        #8549bd
+    );
+
+    color: white;
+
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    box-shadow: 0 7px 18px rgba(91,44,138,0.22);
+
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 24px rgba(91,44,138,0.3);
+}
+
+.btn-login:active {
+    transform: scale(0.98);
+}
+
+.btn-login:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ============================
+   MENSAGEM
+============================ */
+
+#mensagem {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    min-height: 20px;
+}
+
+#mensagem.erro {
+    color: #d93652;
+}
+
+#mensagem.sucesso {
+    color: #218653;
+}
+
+
+/* ============================
+   CRIAR CONTA
+============================ */
+
+.criar-conta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.criar-conta p {
+    color: #898191;
+    font-size: 0.88rem;
+}
+
+
+/* ============================
+   RODAPÉ
+============================ */
+
+.rodape {
+    text-align: center;
+
+    margin-top: 35px;
+
+    color: #a39aaa;
+    font-size: 0.78rem;
+    line-height: 1.8;
+}
+
+
+/* ============================
+   ANIMAÇÕES
+============================ */
+
+@keyframes subir {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+
+@media (max-width: 900px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .VestIQ {
+        width: 100%;
+        min-height: 210px;
+
+        padding: 25px;
+    }
+
+    .VestIQ img {
+        width: 250px;
+    }
+
+    .login_box {
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .login_box h2 {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .login_box {
+        padding: 30px 18px;
+    }
+
+    .login_box h2 {
+        font-size: 1.8rem;
+    }
+
+    .input-box {
+        height: 50px;
+    }
+
+    .opcoes {
+        flex-wrap: wrap;
+    }
+
+}

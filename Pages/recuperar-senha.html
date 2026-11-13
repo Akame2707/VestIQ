@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha | VestIQ</title>
+
+    <link rel="stylesheet" href="../assets/css/recuperar-senha.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="VestIQ">
+
+        <div class="decoracao circulo1"></div>
+        <div class="decoracao circulo2"></div>
+        <div class="decoracao circulo3"></div>
+
+        <img src="../assets/img/vestIQ.png" alt="Logo VestIQ">
+
+        <div class="texto-lateral">
+            <h2>Não se preocupe!</h2>
+            <p>
+                Vamos ajudar você a recuperar o acesso
+                à sua conta e continuar organizando
+                seu estoque com facilidade.
+            </p>
+        </div>
+
+    </div>
+
+    <main class="recuperar_box">
+
+        <div class="topo-formulario">
+
+            <span class="tag">
+                <i class="fa-solid fa-lock"></i>
+                Recuperação de acesso
+            </span>
+
+            <h1>Esqueceu sua senha?</h1>
+
+            <p class="subtitulo">
+                Informe seu e-mail e escolha uma nova senha para sua conta.
+            </p>
+
+        </div>
+
+        <form id="formRecuperar">
+            <div class="campo">
+                <label for="email">E-mail cadastrado</label>
+                <div class="input-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+            </div>
+            <div class="campo">
+                <label for="novaSenha">Nova senha</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="novaSenha" placeholder="Mínimo de 8 caracteres" minlength="8" required>
+                </div>
+            </div>
+            <div class="campo">
+                <label for="confirmarSenha">Confirme a nova senha</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="confirmarSenha" placeholder="Digite a senha novamente" minlength="8" required>
+                </div>
+            </div>
+            <p id="mensagem"></p>
+            <button type="submit" class="btn-recuperar">
+                ALTERAR SENHA
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+
+        <div class="voltar-login">
+            <a href="login.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar para o login
+            </a>
+        </div>
+
+        <footer class="rodape">
+            © 2026 VestIQ. Todos os direitos reservados.
+        </footer>
+
+    </main>
+
+    <script src="../assets/js/recuperar-senha.js"></script>
+
+</body>
+</html>

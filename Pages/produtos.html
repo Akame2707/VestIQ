@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <script>
+    (function () {
+      try {
+        var t =
+          localStorage.getItem('vestiqTema') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Produtos | VestIQ</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body data-page="products">
+  <header class="topo">
+    <a class="marca" href="index.html">
+      <img src="../assets/img/vestIQ.png" alt="VestIQ">
+      <div>
+        <h1>VestIQ</h1>
+        <p>Gestão de materiais</p>
+      </div>
+    </a>
+    <button class="menu-mobile" id="menuMobile">☰</button>
+    <nav id="menu">
+      <a data-link="inicio" href="index.html">Início</a>
+      <a data-link="produtos" href="produtos.html">Produtos</a>
+      <a data-link="pedidos" href="pedidos.html">Solicitar materiais</a>
+      <a data-link="relatorios" href="relatorios.html">Relatórios</a>
+      <a data-link="perfil" href="perfil.html">Meu perfil</a>
+    </nav>
+    <div class="usuario">
+      <div class="avatar" data-avatar>U</div>
+      <div class="ident">
+        <span data-user-name>Usuário</span>
+        <small data-user-role>Cargo</small>
+      </div>
+      <button class="sair" id="btnSair">Sair</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="boas">
+      <div>
+        <span class="tag">CATÁLOGO</span>
+        <h2>Produtos em estoque</h2>
+        <p>Consulte disponibilidade e cadastre novos itens.</p>
+      </div>
+      <div class="simbolo">▤</div>
+    </section>
+
+    <section class="painel">
+      <div class="painel-top">
+        <div>
+          <h2>Lista de produtos</h2>
+          <p><span id="totalProdutos">0</span> item(ns) cadastrado(s)</p>
+        </div>
+        <div class="linha">
+          <input class="search" id="busca" placeholder="Buscar por nome...">
+        </div>
+      </div>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Categoria</th>
+              <th>Qtd.</th>
+              <th>Mínimo</th>
+              <th>Situação</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="listaProdutos"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="painel">
+      <div class="painel-top">
+        <div>
+          <h2>Cadastrar / atualizar produto</h2>
+          <p>Disponível para coordenadores. Se o nome já existir, a quantidade é somada.</p>
+        </div>
+      </div>
+      <form id="formProduto" class="formgrid">
+        <div class="campo">
+          <label>Nome</label>
+          <input id="nome" required>
+        </div>
+        <div class="campo">
+          <label>Categoria</label>
+          <select id="categoria">
+            <option>Acessórios</option>
+            <option>Costura</option>
+            <option>Tecidos</option>
+            <option>Ferramentas</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Quantidade</label>
+          <input id="quantidade" type="number" min="0" value="0" required>
+        </div>
+        <div class="campo">
+          <label>Estoque mínimo</label>
+          <input id="minimo" type="number" min="0" value="5" required>
+        </div>
+        <div class="acoes">
+          <button class="btn">Salvar produto</button>
+        </div>
+      </form>
+      <div id="mensagemGlobal" class="oculto"></div>
+    </section>
+  </main>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

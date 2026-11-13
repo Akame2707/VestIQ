@@ -1,0 +1,296 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background: #f6f3fa;
+    overflow-x: hidden;
+}
+
+/* PAINEL LATERAL */
+
+.VestIQ {
+    width: 43%;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #35145f, #6533a0, #8e5bc1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.VestIQ img {
+    width: 190px;
+    max-width: 70%;
+    object-fit: contain;
+    z-index: 2;
+    margin-bottom: 45px;
+}
+
+.texto-lateral {
+    max-width: 380px;
+    text-align: center;
+    z-index: 2;
+}
+
+.texto-lateral h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.texto-lateral p {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* DECORAÇÕES */
+
+.decoracao {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.circulo1 {
+    width: 350px;
+    height: 350px;
+    top: -120px;
+    left: -100px;
+}
+
+.circulo2 {
+    width: 280px;
+    height: 280px;
+    bottom: -90px;
+    right: -80px;
+}
+
+.circulo3 {
+    width: 120px;
+    height: 120px;
+    top: 45%;
+    right: 10%;
+}
+
+/* FORMULÁRIO */
+
+.recuperar_box {
+    width: 57%;
+    min-height: 100vh;
+    max-width: 800px;
+    margin: auto;
+    padding: 45px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: aparecer 0.8s ease;
+}
+
+.topo-formulario {
+    margin-bottom: 35px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    background: #eee5f8;
+    color: #5b2c8a;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.topo-formulario h1 {
+    font-size: 34px;
+    color: #35145f;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 9px;
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-box {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 17px;
+    background: white;
+    border: 1px solid #ddd5e8;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.input-box:focus-within {
+    border-color: #8549bd;
+    box-shadow: 0 0 0 3px rgba(133, 73, 189, 0.12);
+}
+
+.input-box i {
+    color: #8549bd;
+    font-size: 17px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: #333;
+}
+
+.input-box input::placeholder {
+    color: #aaa;
+}
+
+/* BOTÃO */
+
+.btn-recuperar {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #57258a, #8549bd);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-recuperar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(91, 44, 138, 0.25);
+}
+
+/* MENSAGEM */
+
+#mensagem {
+    display: none;
+    font-size: 14px;
+    margin: 0 0 18px;
+    line-height: 1.5;
+}
+
+#mensagem.sucesso {
+    display: block;
+    color: #26834a;
+}
+
+#mensagem.erro {
+    display: block;
+    color: #c0392b;
+}
+
+/* VOLTAR */
+
+.voltar-login {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.voltar-login a {
+    color: #6533a0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.voltar-login a:hover {
+    color: #35145f;
+}
+
+.voltar-login i {
+    margin-right: 7px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 55px;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .VestIQ {
+        display: none;
+    }
+
+    .recuperar_box {
+        width: 100%;
+        max-width: 600px;
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .recuperar_box {
+        padding: 30px 20px;
+    }
+
+    .topo-formulario h1 {
+        font-size: 28px;
+    }
+
+    .rodape {
+        margin-top: 35px;
+    }
+}
